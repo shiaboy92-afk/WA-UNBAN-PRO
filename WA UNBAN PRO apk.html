@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Devs Wa Unban - Professional WhatsApp Unban Service</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Exo+2:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(-45deg, #25D366, #128C7E, #075E54, #0a4b3e);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .floating-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-item {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            animation: fadeInDown 1s ease;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            font-size: 60px;
+            margin-bottom: 15px;
+            color: white;
+            animation: pulse 2s infinite;
+            text-shadow: 0 0 20px rgba(37, 211, 102, 0.5);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            font-family: 'Orbitron', monospace;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #fff, #25D366, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .form-section, .info-section {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: slideUp 1s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .form-section h2, .info-section h2 {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+            border-left: 4px solid #25D366;
+            padding-left: 15px;
+        }
+
+        .form-section p, .info-section p {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-family: 'Exo 2', sans-serif;
+            font-size: 1.1rem;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px 15px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+            border: 2px solid transparent;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(37, 211, 102, 0.5);
+            border: 2px solid #25D366;
+            transform: translateY(-2px);
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            border: none;
+            padding: 16px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-family: 'Exo 2', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #1da851, #0d7a6d);
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-telegram {
+            background: linear-gradient(45deg, #0088cc, #006699);
+        }
+
+        .btn-telegram:hover {
+            background: linear-gradient(45deg, #0077b3, #005580);
+        }
+
+        .btn-youtube {
+            background: linear-gradient(45deg, #FF0000, #CC0000);
+        }
+
+        .btn-youtube:hover {
+            background: linear-gradient(45deg, #cc0000, #990000);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(45deg, #25D366, #128C7E);
+        }
+
+        .btn-whatsapp:hover {
+            background: linear-gradient(45deg, #1da851, #0d7a6d);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 25px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .feature i {
+            font-size: 35px;
+            margin-bottom: 15px;
+            color: #25D366;
+            text-shadow: 0 0 10px rgba(37, 211, 102, 0.5);
+        }
+
+        .feature h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .feature p {
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .status {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            display: none;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .success {
+            background: rgba(37, 211, 102, 0.2);
+            border: 2px solid #25D366;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .error {
+            background: rgba(255, 0, 0, 0.2);
+            border: 2px solid #ff0000;
+        }
+
+        .channel-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            animation: fadeIn 1.5s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .instructions {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .instructions h3 {
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .instructions ol {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .instructions li {
+            margin-bottom: 12px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Popup Styles */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .popup-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            animation: popIn 0.5s ease;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .popup-content h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .popup-content p {
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .popup-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .close-popup {
+            background: #ff6b6b;
+            margin-top: 15px;
+        }
+
+        .close-popup:hover {
+            background: #ff5252;
+        }
+
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1rem;
+            opacity: 0.8;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 500;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .main-content { flex-direction: column; }
+            .popup-content { padding: 25px; }
+            .logo { font-size: 50px; }
+            .tagline { font-size: 1.2rem; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2rem; }
+            .tagline { font-size: 1rem; }
+            .form-section h2, .info-section h2 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="floating-bg">
+        <div class="floating-item" style="width: 80px; height: 80px; top: 10%; left: 10%; animation-delay: 0s;"></div>
+        <div class="floating-item" style="width: 60px; height: 60px; top: 60%; left: 80%; animation-delay: 1s;"></div>
+        <div class="floating-item" style="width: 100px; height: 100px; top: 30%; left: 70%; animation-delay: 2s;"></div>
+        <div class="floating-item" style="width: 50px; height: 50px; top: 80%; left: 20%; animation-delay: 3s;"></div>
+        <div class="floating-item" style="width: 70px; height: 70px; top: 20%; left: 50%; animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Telegram Popup -->
+    <div id="telegramPopup" class="popup-overlay" style="display: none;">
+        <div class="popup-content">
+            <h2><i class="fab fa-telegram"></i> Join Our Telegram</h2>
+            <p>Get instant updates, support, and exclusive content on our Telegram channel! Don't miss out!</p>
+            <div class="popup-buttons">
+                <a href="https://t.me/DarkDevsOfficial" target="_blank" class="btn btn-telegram">
+                    <i class="fab fa-telegram"></i> Join Telegram Channel
+                </a>
+                <button onclick="closePopup('telegramPopup')" class="btn close-popup">
+                    <i class="fas fa-times"></i> Maybe Later
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fab fa-whatsapp"></i>
+            </div>
+            <h1>Dark Devs Wa Unban</h1>
+            <p class="tagline">Professional WhatsApp Unban Service - Get Back to Chatting Instantly</p>
+        </header>
+
+        <div class="main-content">
+            <div class="form-section">
+                <h2><i class="fas fa-unlock"></i> Submit Unban Request</h2>
+                <p>Fill out the form below to generate your professional appeal letter</p>
+                
+                <form id="unbanForm">
+                    <div class="form-group">
+                        <label for="fullName"><i class="fas fa-user"></i> Full Name</label>
+                        <input type="text" id="fullName" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phoneNumber"><i class="fas fa-phone"></i> WhatsApp Number</label>
+                        <input type="tel" id="phoneNumber" required placeholder="+1 234 567 8900">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email"><i class="fas fa-envelope"></i> Your Email Address</label>
+                        <input type="email" id="email" required placeholder="your@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="banDate"><i class="fas fa-calendar"></i> When were you banned?</label>
+                        <input type="date" id="banDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="appealReason"><i class="fas fa-edit"></i> Your Appeal Message</label>
+                        <textarea id="appealReason" rows="5" required placeholder="Explain why you believe the ban was a mistake and why your account should be reinstated..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">
+                        <i class="fas fa-paper-plane"></i> Generate & Send Unban Request
+                    </button>
+
+                    <div class="instructions">
+                        <h3><i class="fas fa-info-circle"></i> How to Send:</h3>
+                        <ol>
+                            <li>Click the button above</li>
+                            <li>You will be redirected to Gmail</li>
+                            <li>The appeal message will be auto-filled</li>
+                            <li>Send the email to WhatsApp support</li>
+                            <li>Come back to this page after sending</li>
+                        </ol>
+                    </div>
+                </form>
+                
+                <div id="statusMessage" class="status"></div>
+
+                <!-- All Channels Section -->
+                <div style="margin-top: 30px;">
+                    <h3 style="text-align: center; margin-bottom: 20px; font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1.5rem;"><i class="fas fa-users"></i> Join Our Community</h3>
+                    <div class="channels-grid">
+                        <a href="https://t.me/DarkDevsOfficial" target="_blank" class="btn btn-telegram">
+                            <i class="fab fa-telegram"></i> Telegram Channel
+                        </a>
+                        <a href="https://www.youtube.com/@PROXZAMIN" target="_blank" class="btn btn-youtube">
+                            <i class="fab fa-youtube"></i> YouTube Channel
+                        </a>
+                        <a href="https://whatsapp.com/channel/0029VbBBpRm0VycFwS9SyT1a" target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Channel
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-section">
+                <h2><i class="fas fa-info-circle"></i> How It Works</h2>
+                <p>Our professional service helps you craft and send compelling appeals to WhatsApp support team to get your account unbanned quickly.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Fast Processing</h3>
+                        <p>Direct to Gmail in one click</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Professional Appeal</h3>
+                        <p>Well-crafted messages</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-history"></i>
+                        <h3>Track Record</h3>
+                        <p>High success rate</p>
+                    </div>
+                </div>
+                
+                <h3 style="margin-top: 30px; font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1.4rem;"><i class="fas fa-lightbulb"></i> Tips for Success</h3>
+                <ul style="list-style-type: none; margin-top: 15px;">
+                    <li style="margin-bottom: 12px; font-family: 'Rajdhani', sans-serif; font-weight: 500;"><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Be polite and respectful in your appeal</li>
+                    <li style="margin-bottom: 12px; font-family: 'Rajdhani', sans-serif; font-weight: 500;"><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Provide accurate information</li>
+                    <li style="margin-bottom: 12px; font-family: 'Rajdhani', sans-serif; font-weight: 500;"><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Explain what happened clearly</li>
+                    <li style="margin-bottom: 12px; font-family: 'Rajdhani', sans-serif; font-weight: 500;"><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Assure you'll follow Terms of Service</li>
+                </ul>
+
+                <div style="margin-top: 30px; background: rgba(255,255,255,0.15); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1);">
+                    <h4 style="font-family: 'Exo 2', sans-serif; font-weight: 700; font-size: 1.2rem; margin-bottom: 15px;"><i class="fas fa-envelope"></i> WhatsApp Support Emails:</h4>
+                    <p style="font-family: 'Rajdhani', sans-serif; font-weight: 500; font-size: 1rem;">
+                        <strong>Primary:</strong> support@support.whatsapp.com<br>
+                        <strong>Alternative:</strong> android_web@support.whatsapp.com
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Disclaimer: This service helps you send appeals to WhatsApp. We are not affiliated with WhatsApp Inc. Success depends on WhatsApp's review process.</p>
+            <p style="margin-top: 10px;">&copy; MADE BY ZAMIN. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Create floating background elements dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            const floatingBg = document.querySelector('.floating-bg');
+            for (let i = 0; i < 12; i++) {
+                const item = document.createElement('div');
+                item.classList.add('floating-item');
+                const size = Math.random() * 60 + 20;
+                item.style.width = `${size}px`;
+                item.style.height = `${size}px`;
+                item.style.top = `${Math.random() * 100}%`;
+                item.style.left = `${Math.random() * 100}%`;
+                item.style.animationDelay = `${Math.random() * 5}s`;
+                floatingBg.appendChild(item);
+            }
+
+            // Show Telegram popup after 3 seconds
+            setTimeout(() => {
+                showPopup('telegramPopup');
+            }, 3000);
+        });
+
+        // Popup functions
+        function showPopup(popupId) {
+            document.getElementById(popupId).style.display = 'flex';
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+
+        // Form submission handler
+        document.getElementById('unbanForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const email = document.getElementById('email').value;
+            const banDate = document.getElementById('banDate').value;
+            const appealReason = document.getElementById('appealReason').value;
+            
+            // Create the email content
+            const subject = `WhatsApp Unban Appeal - ${phoneNumber}`;
+            const body = `Dear WhatsApp Support Team,
+
+I am writing to appeal the ban on my WhatsApp account associated with phone number: ${phoneNumber}
+
+Account Details:
+- Full Name: ${fullName}
+- Phone Number: ${phoneNumber}
+- My Email: ${email}
+- Ban Date: ${banDate}
+
+Appeal Reason:
+${appealReason}
+
+I believe my account was banned by mistake. I have always followed WhatsApp's Terms of Service and community guidelines. I assure you that I will continue to abide by all rules if my account is reinstated.
+
+Please review my appeal and consider reinstating my account. I look forward to your positive response.
+
+Thank you for your time and consideration.
+
+Sincerely,
+${fullName}
+${email}`;
+
+            // Encode the subject and body for URL
+            const encodedSubject = encodeURIComponent(subject);
+            const encodedBody = encodeURIComponent(body);
+            
+            // Create Gmail URL
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=support@support.whatsapp.com&su=${encodedSubject}&body=${encodedBody}`;
+            
+            // Open Gmail in new tab
+            window.open(gmailUrl, '_blank');
+            
+            // Show success message
+            const statusMessage = document.getElementById('statusMessage');
+            statusMessage.className = 'status success';
+            statusMessage.innerHTML = `
+                <i class="fas fa-check-circle"></i> 
+                <strong>Redirecting to Gmail!</strong><br>
+                Your appeal has been prepared. Please send the email and return to this page.
+            `;
+            statusMessage.style.display = 'block';
+            
+            // Reset form
+            document.getElementById('unbanForm').reset();
+        });
+    </script>
+</body>
+</html>
